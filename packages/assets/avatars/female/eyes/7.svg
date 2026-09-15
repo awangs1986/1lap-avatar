@@ -1,4 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-  <g transform="translate(0 -2)"><ellipse cx="96" cy="126" rx="18" ry="15" fill="#fffaf8" stroke="#241a27" stroke-width="3"/><circle cx="96" cy="127" r="10" fill="#426c77" stroke="#241a27" stroke-width="2"/><path d="M96 118 l2.4 5 5.6.8 -4 4 .9 5.7 -4.9 -2.7 -4.9 2.7 .9 -5.7 -4 -4 5.6-.8Z" fill="white"/><path d="M78 120 l-8 -5 M80 116 l-5 -8" stroke="#241a27" stroke-width="2.5" stroke-linecap="round"/><g transform="translate(256 0) scale(-1 1)"><ellipse cx="96" cy="126" rx="18" ry="15" fill="#fffaf8" stroke="#241a27" stroke-width="3"/><circle cx="96" cy="127" r="10" fill="#426c77" stroke="#241a27" stroke-width="2"/><path d="M96 118 l2.4 5 5.6.8 -4 4 .9 5.7 -4.9 -2.7 -4.9 2.7 .9 -5.7 -4 -4 5.6-.8Z" fill="white"/><path d="M78 120 l-8 -5 M80 116 l-5 -8" stroke="#241a27" stroke-width="2.5" stroke-linecap="round"/></g></g>
+  <defs><clipPath id="el"><path d="M-16 0 Q-16 -14 0 -14 Q16 -14 16 0 Q16 13 0 13 Q-16 13 -16 0Z"/></clipPath></defs>
+  <g transform="translate(96 122)"><path d="M-16 0 Q-16 -14 0 -14 Q16 -14 16 0 Q16 13 0 13 Q-16 13 -16 0Z" fill="#fffaf6"/>
+  <g clip-path="url(#el)">
+    <path d="M-20 5 Q0 -17 20 5 L20 -22 L-20 -22Z" fill="#241a27" opacity=".15"/>
+    <circle cx="0" cy="0.5" r="11.9" fill="#3e7d84"/>
+    <circle cx="0" cy="0.5" r="11.9" fill="none" stroke="#2e4c53" stroke-width="2"/>
+    <path d="M-10.4 1.5 Q0 11.9 10.4 1.5 Q0 7.4 -10.4 1.5Z" fill="#a8c5c8" opacity=".85"/>
+    <circle cx="0" cy="1.1" r="5.0" fill="#1d1218"/>
+    <circle cx="-4.0" cy="-3.8" r="3.6" fill="#ffffff" opacity=".95"/>
+    <circle cx="4.0" cy="4.5" r="1.9" fill="#ffffff" opacity=".5"/>
+    <path d="M6 -6 l1.6 3.4 3.4 1.6 -3.4 1.6 -1.6 3.4 -1.6 -3.4 -3.4 -1.6 3.4 -1.6Z" fill="#ffffff" opacity=".9"/>
+  </g>
+  <path d="M-16 0 Q-16 -14 0 -14 Q16 -14 16 0 Q16 13 0 13 Q-16 13 -16 0Z" fill="none" stroke="#241a27" stroke-width="2.2" opacity=".5"/>
+  <path d="M-17.5 -1 C-13 -13 -4 -17 3 -16.5 C11 -16 16 -11 18 -2.5 C14 -8.5 8.5 -12 1.5 -12.4 C-6 -12.8 -13 -8.5 -17.5 -1Z" fill="#241a27"/>
+  <path d="M18 -6 l6 -4 M19 -2 l6.5 -1.5" stroke="#241a27" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M-13 10 Q0 13.5 13 10" stroke="#241a27" stroke-width="2" opacity=".45" fill="none" stroke-linecap="round"/>
+  <path d="M-14 -10 Q0 -18 14 -10" stroke="#241a27" stroke-width="2" opacity=".3" fill="none" stroke-linecap="round"/></g>
+  <g transform="translate(160 122) scale(-1 1)"><path d="M-16 0 Q-16 -14 0 -14 Q16 -14 16 0 Q16 13 0 13 Q-16 13 -16 0Z" fill="#fffaf6"/>
+  <g clip-path="url(#el)">
+    <path d="M-20 5 Q0 -17 20 5 L20 -22 L-20 -22Z" fill="#241a27" opacity=".15"/>
+    <circle cx="0" cy="0.5" r="11.9" fill="#3e7d84"/>
+    <circle cx="0" cy="0.5" r="11.9" fill="none" stroke="#2e4c53" stroke-width="2"/>
+    <path d="M-10.4 1.5 Q0 11.9 10.4 1.5 Q0 7.4 -10.4 1.5Z" fill="#a8c5c8" opacity=".85"/>
+    <circle cx="0" cy="1.1" r="5.0" fill="#1d1218"/>
+    <circle cx="-4.0" cy="-3.8" r="3.6" fill="#ffffff" opacity=".95"/>
+    <circle cx="4.0" cy="4.5" r="1.9" fill="#ffffff" opacity=".5"/>
+    <path d="M6 -6 l1.6 3.4 3.4 1.6 -3.4 1.6 -1.6 3.4 -1.6 -3.4 -3.4 -1.6 3.4 -1.6Z" fill="#ffffff" opacity=".9"/>
+  </g>
+  <path d="M-16 0 Q-16 -14 0 -14 Q16 -14 16 0 Q16 13 0 13 Q-16 13 -16 0Z" fill="none" stroke="#241a27" stroke-width="2.2" opacity=".5"/>
+  <path d="M-17.5 -1 C-13 -13 -4 -17 3 -16.5 C11 -16 16 -11 18 -2.5 C14 -8.5 8.5 -12 1.5 -12.4 C-6 -12.8 -13 -8.5 -17.5 -1Z" fill="#241a27"/>
+  <path d="M18 -6 l6 -4 M19 -2 l6.5 -1.5" stroke="#241a27" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M-13 10 Q0 13.5 13 10" stroke="#241a27" stroke-width="2" opacity=".45" fill="none" stroke-linecap="round"/>
+  <path d="M-14 -10 Q0 -18 14 -10" stroke="#241a27" stroke-width="2" opacity=".3" fill="none" stroke-linecap="round"/></g>
 </svg>

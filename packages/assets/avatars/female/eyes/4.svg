@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-  <g transform="translate(0 -2)"><path d="M77 130 Q96 112 115 130" stroke="#241a27" stroke-width="4" stroke-linecap="round"/><path d="M84 128 l-4 -7 M91 122 l-1 -7 M108 126 l4 -7" stroke="#241a27" stroke-width="2" stroke-linecap="round"/><g transform="translate(256 0) scale(-1 1)"><path d="M77 130 Q96 112 115 130" stroke="#241a27" stroke-width="4" stroke-linecap="round"/><path d="M84 128 l-4 -7 M91 122 l-1 -7 M108 126 l4 -7" stroke="#241a27" stroke-width="2" stroke-linecap="round"/></g></g>
+  <defs><clipPath id="el"><path d="M0 0"/></clipPath></defs>
+  <g transform="translate(96 122)"><path d="M-16 7 C-10 -5 -2 -9.5 4 -9 C11 -8.4 15 -3 17 4 C13.5 -1.5 9 -4.8 3 -5 C-4 -5.2 -11 -1 -16 7Z" fill="#241a27"/>
+  <path d="M17 4 l4 3 M-16 7 l-3.5 3" stroke="#241a27" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M-11 9 Q0 12.5 11 9" stroke="#241a27" stroke-width="2" opacity=".45" fill="none" stroke-linecap="round"/></g>
+  <g transform="translate(160 122) scale(-1 1)"><path d="M-16 7 C-10 -5 -2 -9.5 4 -9 C11 -8.4 15 -3 17 4 C13.5 -1.5 9 -4.8 3 -5 C-4 -5.2 -11 -1 -16 7Z" fill="#241a27"/>
+  <path d="M17 4 l4 3 M-16 7 l-3.5 3" stroke="#241a27" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M-11 9 Q0 12.5 11 9" stroke="#241a27" stroke-width="2" opacity=".45" fill="none" stroke-linecap="round"/></g>
 </svg>

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-  <g opacity="0.94"><path d="M111 168 Q128 175 145 168" stroke="#241a27" stroke-width="5" stroke-linecap="round"/><path d="M111 171 C104 184 109 193 128 200 C147 193 152 184 145 171" stroke="#241a27" stroke-width="9" stroke-linecap="round" fill="none"/><path d="M118 199 Q128 207 138 199" stroke="#4a354b" stroke-width="3"/></g>
+  <g opacity="0.97"><path fill-rule="evenodd" d="M128 159 C118 155 106 157 101 165 C98 171 100 177 104 180 C101 190 105 200 113 206 Q128 215 143 206 C151 200 155 190 152 180 C156 177 158 171 155 165 C150 157 138 155 128 159Z
+    M113 177 C114 171 142 171 143 177 C143 189 137 196 128 196 C119 196 113 189 113 177Z"
+    fill="#453130" stroke="#2d1f1f" stroke-width="3" stroke-linejoin="round"/></g>
 </svg>

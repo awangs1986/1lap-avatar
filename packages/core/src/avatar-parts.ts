@@ -157,7 +157,7 @@ export function avatarBeardLayerStyle(
 }
 
 /** 静态资源版本：改 SVG 后递增，避免 CDN/浏览器长缓存看不到更新 */
-const AVATAR_ASSET_VER = "20260803c";
+const AVATAR_ASSET_VER = "20260916c"; // 2026-09-16 胡须 7-9 改小胡子三型；鼻/眉 10 款强差异化
 
 export const DEFAULT_AVATAR_BASE_PATH = "/avatars";
 
@@ -315,11 +315,11 @@ export function partLabels(
           "侧分短发",
           "光头",
           "凌乱短发",
-          "侧扫长发",
+          "侧扫短发",
           "莫西干",
           "狼尾发型",
           "经典 Afro 爆炸头",
-          "丸子头",
+          "背头油头",
           "蓬松卷发",
         ]
       : [
@@ -358,9 +358,37 @@ export function partLabels(
       "山羊胡",
       "宽大胡子",
       "环嘴胡",
-      "下巴带",
-      "短络腮",
-      "浓密络腮",
+      "垂梢长胡",
+      "海象浓髭",
+      "青皮胡茬",
+    ];
+  }
+  if (category === "brows") {
+    return [
+      "自然弧眉",
+      "粗平眉",
+      "细高眉",
+      "怒 V 眉",
+      "短圆眉",
+      "剑眉",
+      "断眉",
+      "波浪眉",
+      "疏点眉",
+      "重角眉",
+    ];
+  }
+  if (category === "nose") {
+    return [
+      "标准鼻",
+      "小丑圆鼻",
+      "尖长鼻",
+      "宽鼻翼",
+      "翘钮鼻",
+      "鹰钩鼻",
+      "扁宽鼻",
+      "垂头大鼻",
+      "极简点鼻",
+      "棱角鼻",
     ];
   }
   return Array.from({ length: AVATAR_OPTION_COUNT }, (_, i) => `款式 ${i + 1}`);

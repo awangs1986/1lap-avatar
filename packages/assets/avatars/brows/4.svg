@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-  <path d="M78 98 Q96 90 113 101" stroke="#241a27" stroke-width="4.7" stroke-linecap="round"/>
-  <path d="M143 101 Q160 90 178 98" stroke="#241a27" stroke-width="4.7" stroke-linecap="round"/>
+  <g>
+    <g transform="translate(96 101)"><path d="M-12 1 Q-5 -6 5 -6 Q12 -5.5 15 -1 Q8 -3.5 2 -2.5 Q-6 -1 -12 3Z" fill="#33242c"/></g>
+    <g transform="translate(160 101) scale(-1 1)"><path d="M-12 1 Q-5 -6 5 -6 Q12 -5.5 15 -1 Q8 -3.5 2 -2.5 Q-6 -1 -12 3Z" fill="#33242c"/></g>
+  </g>
 </svg>

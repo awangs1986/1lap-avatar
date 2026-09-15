@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-  <g stroke="#241a27" stroke-width="4" stroke-linejoin="round"><path d="M63 126 Q54 61 92 38 Q128 14 164 38 Q202 61 193 126 L177 102 L162 119 L146 91 L128 114 L110 91 L94 119 L79 102Z" fill="#37695b"/></g>
-  <path d="M92 57 Q123 37 158 48" stroke="white" stroke-opacity=".16" stroke-width="6" stroke-linecap="round"/>
+  <g stroke="#241a27" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M62 120 C50 112 50 94 62 86 C54 68 66 50 84 48 C88 30 108 22 124 28 C138 16 160 22 168 38 C186 38 198 54 194 72 C206 80 206 100 196 108 C200 118 188 128 176 124 Q128 92 82 124 C70 130 60 126 62 116Z" fill="#4a8571"/>
+  <path d="M82 124 Q128 92 176 124 Q152 112 128 112 Q104 112 82 124Z" fill="#3c6256" opacity=".85" stroke="none"/>
+  <g fill="none" stroke="#96b8ad" stroke-width="3.2" stroke-linecap="round" opacity=".5">
+    <path d="M70 92 q6 -10 16 -4 M92 56 q10 -8 18 2 M124 36 q10 -6 18 4 M156 48 q10 -6 16 6 M182 78 q8 -4 12 8"/>
+  </g>
+  <path d="M64 100 C60 62 88 36 116 32" fill="none" stroke="#bad1c9" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+  <path d="M64 118 q1 9 5 14 M194 106 q-1 10 -5 16" stroke="#4a8571" stroke-width="7" stroke-linecap="round"/></g>
 </svg>

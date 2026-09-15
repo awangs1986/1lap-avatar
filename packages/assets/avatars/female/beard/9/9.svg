@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-  <g opacity="0.82"><path d="M76 147 C69 171 73 194 87 206 L111 218 L128 229 L145 218 L169 206 C187 194 187 171 180 147 Q158 158 148 166 Q138 158 128 168 Q118 158 108 166 Q98 158 76 147Z M108 168 Q128 157 148 168 Q146 187 128 192 Q110 187 108 168Z" fill="#241a27" fill-rule="evenodd" stroke="#4a354b" stroke-width="3" stroke-linejoin="round"/><path d="M109 166 Q118 158 128 171 Q138 158 147 166" stroke="#241a27" stroke-width="6" stroke-linecap="round"/><path d="M88 178 Q98 189 105 202 M168 178 Q158 189 151 202 M108 210 Q128 222 148 210" stroke="#5a425b" stroke-width="3" stroke-linecap="round" opacity=".7"/></g>
+  <g opacity="0.82"><path d="M86 142 C86 170 112 215 114 225 Q128 234 142 225 C144 215 170 170 170 142" stroke="#453130" fill="none" stroke-linecap="round" stroke-dasharray="0.6 4.6" stroke-width="13" opacity=".5"/>
+  <path d="M108 167 Q128 160 148 167" stroke="#453130" fill="none" stroke-linecap="round" stroke-dasharray="0.6 4.6" stroke-width="9" opacity=".45"/>
+  <path d="M114 194 Q128 201 142 194" stroke="#453130" fill="none" stroke-linecap="round" stroke-dasharray="0.6 4.6" stroke-width="9" opacity=".45"/></g>
 </svg>
