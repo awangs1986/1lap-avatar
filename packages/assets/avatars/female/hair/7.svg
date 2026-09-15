@@ -8,6 +8,7 @@
   <path d="M104 42 Q96 72 86 100 M152 42 Q160 72 170 100" fill="none" stroke="#201a24" stroke-width="3" stroke-linecap="round" opacity=".7"/>
   <path d="M94 48 Q126 32 158 48 L150 58 Q124 44 102 58Z" fill="#9c9ba0" opacity=".4" stroke="none"/>
   <path d="M66 116 C62 58 98 36 128 36" fill="none" stroke="#abaaae" stroke-width="3" stroke-linecap="round" opacity=".5"/>
-  <path d="M186 142 l24 -12" stroke="#d9b85f" stroke-width="4.5" stroke-linecap="round"/>
-  <circle cx="212" cy="129" r="4.5" fill="#d75b7b" stroke="#241a27" stroke-width="2"/></g>
+  <path d="M192 156 l26 -14" stroke="#d9b85f" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="220" cy="140" r="4.5" fill="#d75b7b" stroke="#241a27" stroke-width="2"/>
+  <circle cx="192" cy="156" r="2.5" fill="#d9b85f"/></g>
 </svg>
