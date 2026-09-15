@@ -46,5 +46,7 @@ export default defineConfig({
   },
   server: {
     fs: { allow: [repoRoot] },
+    // 开发预览常跑在容器/隧道域名后（如沙盒 proxy），仅 dev 生效
+    allowedHosts: true,
   },
 });

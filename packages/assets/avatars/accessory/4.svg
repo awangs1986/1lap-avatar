@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-<!-- AMG 车队帽：日漫风六片式棒球帽 -->
-  <path d="M69 82 C72 48 93 27 128 25 C163 27 184 48 187 82 C168 76 148 73 128 73 C108 73 88 76 69 82Z" fill="#30343a" stroke="#241a27" stroke-width="5" stroke-linejoin="round"/>
-  <path d="M69 82 C73 54 87 36 108 29 C98 43 94 60 94 76 C85 77 77 79 69 82Z" fill="#181b20" opacity=".78"/>
-  <path d="M187 82 C183 54 169 36 148 29 C158 43 162 60 162 76 C171 77 179 79 187 82Z" fill="#181b20" opacity=".78"/>
-  <path d="M128 27 V73 M108 30 Q95 49 94 76 M148 30 Q161 49 162 76" stroke="#b9c2cc" stroke-width="2.5" opacity=".72"/>
-  <circle cx="128" cy="25" r="4.5" fill="#b9c2cc" stroke="#241a27" stroke-width="2"/>
-  <path d="M70 80 Q128 67 186 80" stroke="#b9c2cc" stroke-width="4" opacity=".9"/>
+<!-- team cap -->
+  <path d="M69 84 C72 46 94 26 128 24 C162 26 184 46 187 84 C168 77 148 74 128 74 C108 74 88 77 69 84Z" fill="#30343a" stroke="#241a27" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M69 84 C73 54 87 35 108 28 C98 42 94 60 94 77 C85 78 77 81 69 84Z" fill="#181b20" opacity=".85"/>
+  <path d="M187 84 C183 54 169 35 148 28 C158 42 162 60 162 77 C171 78 179 81 187 84Z" fill="#181b20" opacity=".85"/>
+  <path d="M128 26 V74 M108 29 Q96 48 95 77 M148 29 Q160 48 159 77" stroke="#b9c2cc" stroke-width="2" opacity=".55" fill="none"/>
+  <path d="M92 42 C104 31 119 27 133 28" stroke="#8d8f93" stroke-width="4" stroke-linecap="round" opacity=".8" fill="none"/>
+  <circle cx="128" cy="24" r="4" fill="#b9c2cc" stroke="#241a27" stroke-width="2"/>
   <g transform="translate(107 43)" fill="#eef2f6"><path d="M0 18 L12 0 H18 L7 18Z"/><path d="M18 18 L30 0 H35 L25 18Z"/><path d="M37 3 H44 L35 18 H29Z"/></g><path d="M101 65 H155" stroke="#00a19c" stroke-width="3"/>
-  <path d="M68 80 C90 75 110 74 129 76 C153 76 176 80 194 88 C176 97 151 100 126 98 C102 97 81 92 67 85Z" fill="#15181c" stroke="#241a27" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M78 84 C107 80 142 81 180 90" stroke="#b9c2cc" stroke-width="2.5" opacity=".48" stroke-linecap="round"/>
+  <path d="M66 82 C90 76 110 75 129 77 C153 77 176 81 196 90 C178 100 152 103 126 101 C102 100 80 94 64 87Z" fill="#15181c" stroke="#241a27" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M78 86 C107 81 142 82 182 91" stroke="#5b5d60" stroke-width="2.5" stroke-linecap="round" opacity=".6" fill="none"/>
 </svg>

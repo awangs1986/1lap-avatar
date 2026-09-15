@@ -157,7 +157,7 @@ export function avatarBeardLayerStyle(
 }
 
 /** 静态资源版本：改 SVG 后递增，避免 CDN/浏览器长缓存看不到更新 */
-const AVATAR_ASSET_VER = "20260803c";
+const AVATAR_ASSET_VER = "20260915a"; // 2026-09-15 美术重制：全部图层重新生成
 
 export const DEFAULT_AVATAR_BASE_PATH = "/avatars";
 

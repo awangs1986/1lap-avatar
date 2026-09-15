@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-  <g stroke="#241a27" stroke-width="4" stroke-linejoin="round"><path d="M60 183 Q48 72 94 38 Q145 2 196 65 L192 194 L170 168 L162 88 L143 112 L126 78 L106 110 L90 90 L83 191Z" fill="#72528f"/></g>
-  <path d="M92 57 Q123 37 158 48" stroke="white" stroke-opacity=".16" stroke-width="6" stroke-linecap="round"/>
+  <g stroke="#241a27" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M60 186 C48 66 94 32 128 32 C162 32 208 66 196 186 L188 170 L184 190 L176 166 L172 122 L164 106 L156 114 L148 102 L138 112 L128 102 L118 112 L108 102 L100 114 L92 106 L84 122 L80 166 L72 190 L68 170Z" fill="#8465a8"/>
+  <path d="M84 122 L92 106 L100 114 L108 102 L118 112 L128 102 L138 112 L148 102 L156 114 L164 106 Q146 96 128 96 Q110 96 84 122Z" fill="#644c7c" opacity=".85" stroke="none"/>
+  <path d="M66 130 Q62 160 64 182 M190 130 Q194 160 192 182" fill="none" stroke="#5f4775" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  <path d="M92 46 Q126 30 160 46 L152 56 Q124 42 100 56Z" fill="#c8bad8" opacity=".4" stroke="none"/>
+  <path d="M62 118 C58 56 96 34 128 34" fill="none" stroke="#d0c4de" stroke-width="3" stroke-linecap="round" opacity=".5"/></g>
 </svg>

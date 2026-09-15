@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-  <path d="M103 190 L99 237 L157 237 L153 190Z" fill="#dda77f" stroke="#241a27" stroke-width="3"/>
-  <ellipse cx="72" cy="130" rx="13" ry="20" fill="#dda77f" stroke="#241a27" stroke-width="3"/>
-  <ellipse cx="184" cy="130" rx="13" ry="20" fill="#dda77f" stroke="#241a27" stroke-width="3"/>
-  <path d="M61 103 Q65 55 128 52 Q191 55 195 103 L190 169 L166 207 Q128 220 90 207 L66 169Z" fill="#dda77f" stroke="#241a27" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M166 73 Q185 104 177 158 Q169 194 131 216 Q158 188 158 158 Q177 123 166 73Z" fill="#bd765c" opacity=".24"/>
-  <path d="M81 130 Q74 126 77 139 M175 130 Q182 126 179 139" stroke="#bd765c" stroke-width="2" stroke-linecap="round"/>
+  <defs>
+    <radialGradient id="bl"><stop offset="0" stop-color="#d4746b" stop-opacity=".5"/><stop offset="1" stop-color="#d4746b" stop-opacity="0"/></radialGradient>
+    <radialGradient id="hl"><stop offset="0" stop-color="#ffffff" stop-opacity=".12"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+    <clipPath id="fc"><path d="M61 100C59 72 77 55 128 54C179 55 197 72 195 100C197 138 194 160 186 177C177 196 189 174 173 192C175 203 140 218 128 218C116 218 81 203 83 192C67 174 79 196 70 177C62 160 59 138 61 100Z"/></clipPath>
+  </defs>
+  <!-- 颈 + 下颌投影 -->
+  <path d="M91 182 C86 200 86 220 88 236 Q128 244 168 236 C170 220 170 200 165 182Z" fill="#dda77f" stroke="#241a27" stroke-width="3"/>
+  <path d="M89 198 Q128 222 167 198 L167 210 Q128 234 89 210Z" fill="#a26144" opacity=".45"/>
+  <!-- 耳 -->
+  <ellipse cx="62" cy="140" rx="11" ry="17" fill="#dda77f" stroke="#241a27" stroke-width="3"/>
+  <ellipse cx="194" cy="140" rx="11" ry="17" fill="#dda77f" stroke="#241a27" stroke-width="3"/>
+  <path d="M59 133 Q65 139 62 148 M197 133 Q191 139 194 148" stroke="#a26144" stroke-width="2.4" stroke-linecap="round" fill="none" opacity=".8"/>
+  <!-- 脸 -->
+  <path d="M61 100C59 72 77 55 128 54C179 55 197 72 195 100C197 138 194 160 186 177C177 196 189 174 173 192C175 203 140 218 128 218C116 218 81 203 83 192C67 174 79 196 70 177C62 160 59 138 61 100Z" fill="#dda77f" stroke="#241a27" stroke-width="4" stroke-linejoin="round"/>
+  <!-- 统一左上光源：右侧落影 + 左侧柔光（裁剪在脸内） -->
+  <g clip-path="url(#fc)">
+    <path d="M180 108 C178 148 170 172 159 186 C149 204 146 216 142 222 L156 232 L262 232 L262 40 L203 40 C197 78 187 94 180 108Z" fill="#bd7756" opacity=".25"/>
+    <path d="M92 208 Q128 224 164 208 Q128 216 92 208Z" fill="#bd7756" opacity=".35"/>
+    <ellipse cx="100" cy="106" rx="48" ry="32" fill="url(#hl)"/>
+  </g>
   
-  <path d="M88 203 Q128 214 168 203" stroke="#241a27" stroke-width="2" opacity=".22"/>
+  <path d="M81 166 Q87 184 95 196 M175 166 Q173 184 173 196" stroke="#a26144" stroke-width="2.4" stroke-linecap="round" opacity=".38" fill="none"/>
 </svg>
