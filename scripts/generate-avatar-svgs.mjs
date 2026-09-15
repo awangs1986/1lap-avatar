@@ -325,6 +325,8 @@ const B_LIGHT = "#82666a";
 const bStrand = (d) =>
   `<path d="${d}" stroke="${B_LIGHT}" stroke-width="2.4" fill="none" opacity=".5" stroke-linecap="round"/>`;
 const bShade = (d) => `<path d="${d}" fill="${B_DARK}" opacity=".45"/>`;
+const bStrandD = (d) =>
+  `<path d="${d}" stroke="${B_DARK}" stroke-width="2.6" fill="none" opacity=".5" stroke-linecap="round"/>`;
 
 /** 髭（居中 128,168）：base 形 + transform 变体 */
 function moustache({ sx = 1, sy = 1, curl = 0, drop = 0 } = {}) {
@@ -340,15 +342,19 @@ function moustache({ sx = 1, sy = 1, curl = 0, drop = 0 } = {}) {
 }
 
 /** 络腮环：外缘=下颌外扩 3~6px，内缘=颊线斜落 + 嘴部开窗 */
-function beardRing(pr, { top = 128, cheek = 150, drop = 6, point = 0 } = {}) {
+function beardRing(pr, { top = 128, cheek = 150, drop = 6, point = 0, ox = 0, square = false } = {}) {
   const J = pr.J - 4, K = pr.K - 4, C = pr.C + 2;
   const RJ = 256 - J, RK = 256 - K;
   const chinY = C + 4 + drop;
-  const chinMid = point ? `C110 ${chinY - 2} 120 ${chinY + point} 128 ${chinY + point} C136 ${chinY + point} 146 ${chinY - 2} ${RK - 2} ${C - 8}` : `Q128 ${chinY} ${RK - 2} ${C - 8}`;
-  return `<path d="M${J - 6} ${top}
-    C${J - 7} 168 ${K - 5} ${C - 18} ${K - 2} ${C - 8}
-    ${point ? `C110 ${chinY - 2} 118 ${chinY + point} 128 ${chinY + point} C138 ${chinY + point} 146 ${chinY - 2} ${RK - 2} ${C - 8}` : chinMid}
-    C${RK + 5} ${C - 18} ${RJ + 7} 168 ${RJ + 6} ${top}
+  const bottom = square
+    ? `C${K + 26} ${chinY - 2} ${RK - 26} ${chinY - 2} ${RK - 2} ${C - 8}`
+    : point
+      ? `C110 ${chinY - 2} 118 ${chinY + point} 128 ${chinY + point} C138 ${chinY + point} 146 ${chinY - 2} ${RK - 2} ${C - 8}`
+      : `Q128 ${chinY} ${RK - 2} ${C - 8}`;
+  return `<path d="M${J - 6 - ox} ${top}
+    C${J - 7 - ox} 168 ${K - 5 - ox} ${C - 18} ${K - 2 - ox} ${C - 8}
+    ${bottom}
+    C${RK + 5 + ox} ${C - 18} ${RJ + 7 + ox} 168 ${RJ + 6 + ox} ${top}
     L${RJ - 2} ${top + 12}
     C${RJ - 10} ${cheek + 10} 150 172 147 179
     C146 186 142 191 137 195
@@ -359,18 +365,25 @@ function beardRing(pr, { top = 128, cheek = 150, drop = 6, point = 0 } = {}) {
 }
 
 /** 下颌带（chinstrap）：只沿下颌一圈窄带 */
-function beardStrap(pr, { top = 134 } = {}) {
+function beardStrap(pr, { top = 138 } = {}) {
   const J = pr.J - 4, K = pr.K - 4, C = pr.C + 2;
   const RJ = 256 - J, RK = 256 - K;
   return `<path d="M${J - 6} ${top}
     C${J - 7} 168 ${K - 5} ${C - 18} ${K - 2} ${C - 8}
     Q128 ${C + 5} ${RK - 2} ${C - 8}
     C${RK + 5} ${C - 18} ${RJ + 7} 168 ${RJ + 6} ${top}
-    L${RJ - 5} ${top + 6}
-    C${RJ - 1} 168 ${RK + 3} ${C - 30} ${RK + 5} ${C - 21}
-    Q128 ${C - 8} ${K - 5 + 0} ${C - 21}
-    C${K - 3} ${C - 30} ${J + 1} 168 ${J + 5} ${top + 6}Z"
-    fill="${B_BASE}" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/>`;
+    L${RJ - 5} ${top + 7}
+    C${RJ - 4} 166 ${RK + 2} ${C - 32} ${RK + 4} ${C - 24}
+    Q128 ${C - 9} ${K - 4} ${C - 24}
+    C${K - 2} ${C - 32} ${J + 4} 166 ${J + 5} ${top + 7}Z"
+    fill="${B_BASE}" stroke="${B_DARK}" stroke-width="3" stroke-linejoin="round"/>`;
+}
+
+/** 环嘴胡：髭与颏环连成一圈绕嘴，脸颊与下颌保持干净 */
+function circleBeard() {
+  return `<path fill-rule="evenodd" d="M128 159 C118 155 106 157 101 165 C98 171 100 177 104 180 C101 190 105 200 113 206 Q128 215 143 206 C151 200 155 190 152 180 C156 177 158 171 155 165 C150 157 138 155 128 159Z
+    M113 177 C114 171 142 171 143 177 C143 189 137 196 128 196 C119 196 113 189 113 177Z"
+    fill="${B_BASE}" stroke="${B_DARK}" stroke-width="3" stroke-linejoin="round"/>`;
 }
 
 /** 山羊胡下巴块 */
@@ -383,21 +396,20 @@ function chinPatch(pr, { top = 196, drop = 3 } = {}) {
 function beardStyles(i, g) {
   const pr = FACE_PARAMS[i];
   const strandsFull = (drop) =>
-    bStrand(`M${pr.J + 4} 154 Q${pr.J + 14} 168 130 178 M${256 - pr.J - 4} 154 Q${256 - pr.J - 14} 168 126 178 M${pr.J - 0} 150 Q${pr.J + 4} 176 ${pr.K + 2} ${pr.C - 14} M${256 - pr.J} 150 Q${252 - pr.J - 4 + 0} 176 ${256 - pr.K - 2} ${pr.C - 14} M114 ${pr.C - 12 + drop * 0.5} Q128 ${pr.C - 4 + drop * 0.5} 142 ${pr.C - 12 + drop * 0.5}`) +
-    bStrand(`M116 ${pr.C - 2 + drop * 0.6} Q128 ${pr.C + 4 + drop * 0.6} 140 ${pr.C - 2 + drop * 0.6}`);
+    bStrandD(`M${pr.J + 2} 152 Q${pr.J + 6} 178 ${pr.K + 2} ${pr.C - 14} M${256 - pr.J - 2} 152 Q${252 - pr.J - 6} 178 ${256 - pr.K - 2} ${pr.C - 14} M116 ${pr.C - 4 + drop * 0.5} Q128 ${pr.C + 2 + drop * 0.5} 140 ${pr.C - 4 + drop * 0.5}`);
   const styles = {
     1: moustache({ sy: 0.82 }),
     2: moustache({ sx: 1.06, sy: 1.05, drop: 1 }) + chinPatch(pr, { top: 196, drop: 2 }),
     3: moustache({ curl: 1 }),
     4: moustache({ sy: 0.95 }) + chinPatch(pr, { top: 192, drop: 5 }) +
       bStrand(`M120 200 Q128 206 136 200`),
-    5: beardRing(pr, { top: 140, cheek: 158, drop: 8 }) + moustache({ sx: 1.22, sy: 1.05 }) + strandsFull(8),
-    6: beardRing(pr, { top: 138, cheek: 156, drop: 4 }) + moustache({ sx: 1.18, sy: 0.95 }) + strandsFull(4),
-    7: beardRing(pr, { top: 138, cheek: 174, drop: 2 }) + moustache({ sx: 1.15, sy: 0.9 }) +
-      bStrand(`M${pr.J + 0} 160 Q${pr.J + 4} 180 ${pr.K + 4} ${pr.C - 14} M${256 - pr.J} 160 Q${252 - pr.J - 4} 180 ${256 - pr.K - 4} ${pr.C - 14}`),
-    8: beardRing(pr, { top: 138, cheek: 156, drop: 2 }) + moustache({ sx: 1.18, sy: 0.92 }) + strandsFull(2),
-    9: beardRing(pr, { top: 134, cheek: 154, drop: 8, point: 3 }) + moustache({ sx: 1.24, sy: 1.1 }) + strandsFull(20) +
-      bStrand(`M${pr.J - 2} 140 q-4 22 2 40 M${256 - pr.J + 2} 140 q4 22 -2 40 M120 ${pr.C + 8} q8 6 16 0`),
+    5: beardRing(pr, { top: 138, cheek: 160, drop: 6, ox: 5, square: true }) + moustache({ sx: 1.26, sy: 1.08 }) + strandsFull(6),
+    6: circleBeard(),
+    7: beardStrap(pr, { top: 138 }) + moustache({ sx: 1.15, sy: 0.9 }) +
+      bStrandD(`M${pr.J + 0} 158 Q${pr.J + 4} 180 ${pr.K + 6} ${pr.C - 16} M${256 - pr.J} 158 Q${252 - pr.J - 4} 180 ${256 - pr.K - 6} ${pr.C - 16}`),
+    8: beardRing(pr, { top: 142, cheek: 162, drop: -2 }) + moustache({ sx: 1.16, sy: 0.92 }) + strandsFull(0),
+    9: beardRing(pr, { top: 130, cheek: 152, drop: 16, point: 7, ox: 2 }) + moustache({ sx: 1.26, sy: 1.12 }) + strandsFull(16) +
+      bStrandD(`M${pr.J - 3} 142 q-5 24 1 44 M${256 - pr.J + 3} 142 q5 24 -1 44`),
   };
   return styles[i];
 }
@@ -458,7 +470,7 @@ const maleHair = (c) => [
   ${strand("M158 44 Q128 62 96 92 M172 58 Q142 76 110 104", c)}
   ${sheen("M94 46 Q126 30 158 42 L150 52 Q124 42 100 54Z", c)}
   ${rim("M64 108 C64 56 98 34 130 34", c)}
-  <path d="M64 126 q-1 20 5 34 M191 124 q0 18 -4 30" stroke="${c}" stroke-width="9" stroke-linecap="round"/>`,
+  <path d="M66 122 q-1 12 4 20 M189 120 q0 11 -3 18" stroke="${c}" stroke-width="8" stroke-linecap="round"/>`,
   // 5 莫西干
   `<path d="M102 94 C104 66 110 40 118 18 L124 34 L128 6 L134 32 L140 14 C146 40 152 66 154 94 Q128 76 102 94Z" fill="${c}"/>
   ${under("M112 86 Q128 74 144 86 Q128 82 112 86Z", c)}
@@ -476,15 +488,13 @@ const maleHair = (c) => [
     <path d="M62 82 q8 -12 18 -2 M84 46 q10 -10 20 0 M116 24 q10 -8 20 2 M152 32 q10 -8 18 4 M180 60 q10 -6 16 6 M188 94 q8 -4 12 8 M64 104 q6 -8 14 -4"/>
   </g>
   ${rim("M62 98 C58 60 84 32 112 26", c)}`,
-  // 8 丸子头：发丝向丸子收拢
-  `<path d="M70 116 C66 62 98 36 128 34 C158 36 190 62 186 116 Q160 96 128 96 Q96 96 70 116Z" fill="${c}"/>
-  <circle cx="152" cy="28" r="16" fill="${c}" stroke="${ink}" stroke-width="4"/>
-  <path d="M140 40 q12 7 24 0" stroke="${dark(c, 0.45)}" stroke-width="6" stroke-linecap="round" fill="none"/>
-  <path d="M140 38 q12 7 24 0" stroke="${dark(c, 0.4)}" stroke-width="5" stroke-linecap="round" fill="none"/>
-  ${strand("M92 62 Q118 46 138 36 M84 86 Q114 62 140 44", c)}
-  ${sheen("M92 52 Q122 36 152 48 L145 57 Q120 47 98 59Z", c)}
-  ${rim("M72 100 C72 58 100 36 128 36", c)}
-  <path d="M70 110 q1 9 4 14 M186 110 q-1 9 -4 14" stroke="${c}" stroke-width="6" stroke-linecap="round"/>`,
+  // 8 背头油头：高发际线+后梳发流+两侧铲青
+  `<path d="M70 106 C70 58 94 30 128 28 C162 30 186 58 186 106 C180 91 172 83 164 80 C150 74 106 74 92 80 C84 83 76 91 70 106Z" fill="${c}"/>
+  <path d="M98 44 C104 26 144 22 160 34 C144 28 116 30 106 46Z" fill="${light(c, 0.4)}" opacity=".75"/>
+  <path d="M66 104 C64 120 66 134 70 144 L77 140 C73 128 73 114 75 102Z M190 104 C192 120 190 134 186 144 L179 140 C183 128 183 114 181 102Z" fill="${dark(c, 0.5)}" opacity=".45"/>
+  ${strand("M94 78 C96 56 106 42 120 36 M110 76 C112 54 122 42 136 38 M128 76 C130 52 141 42 151 40 M146 78 C150 58 158 48 166 46", c)}
+  ${sheen("M94 44 Q128 26 162 44 L154 53 Q126 40 102 54Z", c)}
+  ${rim("M72 98 C74 54 98 32 128 30", c)}`,
   // 9 蓬松卷发
   `<path d="M62 120 C50 112 50 94 62 86 C54 68 66 50 84 48 C88 30 108 22 124 28 C138 16 160 22 168 38 C186 38 198 54 194 72 C206 80 206 100 196 108 C200 118 188 128 176 124 Q128 92 82 124 C70 130 60 126 62 116Z" fill="${c}"/>
   ${under("M82 124 Q128 92 176 124 Q152 112 128 112 Q104 112 82 124Z", c)}

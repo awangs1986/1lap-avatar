@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-  <g opacity="0.97"><path d="M78 138
-    C77 168 90 198 93 208
-    Q128 224 159 208
-    C166 198 179 168 178 138
-    L170 150
-    C162 166 150 172 147 179
-    C146 186 142 191 137 195
-    Q128 199.8 119 195
-    C114 191 110 186 109 179
-    C106 172 94 166 86 150Z"
-    fill="#453130" stroke="#2d1f1f" stroke-width="3" stroke-linejoin="round"/><g transform="translate(128 168) scale(1.18 0.95) translate(-128 -168)">
-    <path d="M128 162 C120 157 108 158 102 166 C100 171 104 177 110 176 C116 170 122 168 128 170 C134 168 140 170 146 176 C152 177 156 171 154 166 C148 158 136 157 128 162Z" fill="#453130" stroke="#241a27" stroke-width="3" stroke-linejoin="round"/>
-    <path d="M128 164 V170" stroke="#82666a" stroke-width="2" opacity=".6"/>
-  </g><path d="M92 154 Q102 168 130 178 M164 154 Q154 168 126 178 M88 150 Q92 176 101 200 M168 150 Q160 176 155 200 M114 204 Q128 212 142 204" stroke="#82666a" stroke-width="2.4" fill="none" opacity=".5" stroke-linecap="round"/><path d="M116 214.4 Q128 220.4 140 214.4" stroke="#82666a" stroke-width="2.4" fill="none" opacity=".5" stroke-linecap="round"/></g>
+  <g opacity="0.97"><path fill-rule="evenodd" d="M128 159 C118 155 106 157 101 165 C98 171 100 177 104 180 C101 190 105 200 113 206 Q128 215 143 206 C151 200 155 190 152 180 C156 177 158 171 155 165 C150 157 138 155 128 159Z
+    M113 177 C114 171 142 171 143 177 C143 189 137 196 128 196 C119 196 113 189 113 177Z"
+    fill="#453130" stroke="#2d1f1f" stroke-width="3" stroke-linejoin="round"/></g>
 </svg>

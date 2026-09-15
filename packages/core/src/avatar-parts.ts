@@ -157,7 +157,7 @@ export function avatarBeardLayerStyle(
 }
 
 /** 静态资源版本：改 SVG 后递增，避免 CDN/浏览器长缓存看不到更新 */
-const AVATAR_ASSET_VER = "20260916a"; // 2026-09-16 美学二轮：胡须/头发/嘴/鼻重绘
+const AVATAR_ASSET_VER = "20260916b"; // 2026-09-16 胡须 5-9 差异化 + 男性发型去女性化
 
 export const DEFAULT_AVATAR_BASE_PATH = "/avatars";
 
@@ -315,11 +315,11 @@ export function partLabels(
           "侧分短发",
           "光头",
           "凌乱短发",
-          "侧扫长发",
+          "侧扫短发",
           "莫西干",
           "狼尾发型",
           "经典 Afro 爆炸头",
-          "丸子头",
+          "背头油头",
           "蓬松卷发",
         ]
       : [
