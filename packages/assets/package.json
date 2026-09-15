@@ -1,0 +1,10 @@
+{
+  "name": "@1lap/avatar-assets",
+  "version": "0.1.0",
+  "description": "SVG layer assets for @1lap/avatar-* (serve under /avatars)",
+  "license": "MIT",
+  "files": ["avatars", "README.md"],
+  "exports": {
+    "./avatars/*": "./avatars/*"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "1lap-avatar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open-source-ready monorepo for 1lap layered SVG avatars",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @1lap/avatar-core && npm run build -w @1lap/avatar-react",
+    "test": "npm run test -w @1lap/avatar-core",
+    "demo": "npm run dev -w @1lap/avatar-demo",
+    "generate:avatars": "node scripts/generate-avatar-svgs.mjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

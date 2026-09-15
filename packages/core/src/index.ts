@@ -1,0 +1,33 @@
+export {
+  AVATAR_SIZE,
+  AVATAR_CATEGORIES,
+  AVATAR_GENDERS,
+  AVATAR_GENDER_LABEL,
+  AVATAR_SKIN_TONES,
+  AVATAR_LAYER_ORDER,
+  AVATAR_CATEGORY_LABEL,
+  AVATAR_OPTION_COUNT,
+  AVATAR_HAT_INDICES,
+  DEFAULT_AVATAR_CONFIG,
+  DEFAULT_AVATAR_BASE_PATH,
+  AVATAR_FIELD_MAP,
+  isHatAccessory,
+  faceWidthScale,
+  avatarHairLayerStyle,
+  avatarBeardLayerStyle,
+  avatarPartSrc,
+  clampPartIndex,
+  clampSkinIndex,
+  normalizeAvatarGender,
+  normalizeAvatarConfig,
+  avatarConfigFromDriver,
+  partLabels,
+} from "./avatar-parts";
+
+export type {
+  AvatarCategory,
+  AvatarGender,
+  AvatarConfig,
+  AvatarField,
+  AvatarPartSrcOptions,
+} from "./avatar-parts";

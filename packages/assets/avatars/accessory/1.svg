@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+<g stroke="#241a27" stroke-width="4"><path d="M75 117 Q95 112 115 119 L110 134 Q94 142 79 131Z" fill="#171923"/><path d="M181 117 Q161 112 141 119 L146 134 Q162 142 177 131Z" fill="#171923"/><path d="M114 121 Q128 116 142 121"/><path d="M79 120 l-13 -5 M177 120 l13 -5"/></g><path d="M82 119 l20 -3" stroke="white" stroke-width="3" opacity=".35"/>
+</svg>
