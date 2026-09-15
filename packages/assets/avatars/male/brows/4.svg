@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
-  <g fill="#33242c">
-    <g transform="translate(96 101)"><path d="M-16 1 C-7.2 -9.4 4 -9.4 16 -1 C4.8 -5.15 -6.4 -4.8100000000000005 -16 3.72Z"/></g>
-    <g transform="translate(160 101) scale(-1 1)"><path d="M-16 1 C-7.2 -9.4 4 -9.4 16 -1 C4.8 -5.15 -6.4 -4.8100000000000005 -16 3.72Z"/></g>
+  <g>
+    <g transform="translate(96 101)"><path d="M-12 1 Q-5 -6 5 -6 Q12 -5.5 15 -1 Q8 -3.5 2 -2.5 Q-6 -1 -12 3Z" fill="#33242c"/></g>
+    <g transform="translate(160 101) scale(-1 1)"><path d="M-12 1 Q-5 -6 5 -6 Q12 -5.5 15 -1 Q8 -3.5 2 -2.5 Q-6 -1 -12 3Z" fill="#33242c"/></g>
   </g>
 </svg>
